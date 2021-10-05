@@ -4,7 +4,7 @@
 }
 
 cmscollege.in {
-      redir  https://www.gsce.in{uri} permanent
+      redir  https://www.cmscollege.in{uri} permanent
 }
 
 www.cmscollege.in {
