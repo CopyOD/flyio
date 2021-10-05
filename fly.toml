@@ -4,23 +4,14 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 
 [[services]]
-  internal_port = 80
-  protocol = "tcp"
+    internal_port = 80
+    protocol = "tcp"
 
-  [[services.ports]]
-    port = "80"
+    [[services.ports]]
+        handlers = ["http"]
+        port = "80"
 
-  [[services.http_checks]]
-    interval = 60000
-    method = "get"
-    path = "/health"
-    protocol = "http"
-    timeout = 2000
-    tls_skip_verify = true
-
-[[services]]
-  internal_port = 443
-  protocol = "tcp"
-
-  [[services.ports]]
-    port = "443"
+    [[services.ports]]
+        handlers = ["tls", "http"]
+        port = "443"
+        
