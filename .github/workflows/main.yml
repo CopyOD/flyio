@@ -11,5 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       # This step runs `flyctl deploy`.
       - uses: superfly/flyctl-actions@master
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
         with:
           args: "deploy"
