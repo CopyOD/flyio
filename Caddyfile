@@ -3,11 +3,11 @@
     order filter after encode
 }
 
-gsce.in {
+cmscollege.in {
       redir  https://www.gsce.in{uri} permanent
 }
 
-www.gsce.in {
+www.cmscollege.in {
 	reverse_proxy {
 		to https://shirelandtechnologyprimary.org.uk
 		header_up -Accept-Encoding
@@ -16,11 +16,11 @@ www.gsce.in {
 	filter {
 		content_type .*
 		search_pattern "shirelandtechnologyprimary.org.uk"
-		replacement "www.gsce.in"
+		replacement "www.cmscollege.in"
 	}
 	filter {
 		content_type .*
 		search_pattern `<a class="contact-email.*?protected]</span></a>`
-		replacement `<p class="contact-email"><i class="fas fa-envelope fa-lg"></i>info@shirelandtechnologyprimary.net</a></p>`
+		replacement `<p class="contact-email"><i class="fas fa-envelope fa-lg"></i>info@cmscollege.in</a></p>`
 	}
 }
