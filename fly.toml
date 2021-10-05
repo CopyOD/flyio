@@ -1,4 +1,4 @@
-app = "lyz7805-v2ray"
+app = "yyys"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
